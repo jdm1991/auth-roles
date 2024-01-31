@@ -25,6 +25,7 @@ async function createUser(username, password) {
     data: {
       username,
       passwordHash: await bcrypt.hash(password, 6),
+      role: 'USER',
       posts: {
         create: posts
       }
